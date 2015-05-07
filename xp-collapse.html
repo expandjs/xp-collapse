@@ -267,7 +267,7 @@ This element is used to display a collapsible element.
             attached: function () {
                 var self = this;
                 self.mutated();
-                XP.delay(function () { self.animatable = true; });
+                XP.requestAnimationFrame(function () { self.animatable = true; });
             },
 
             // LISTENER
