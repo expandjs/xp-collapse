@@ -113,7 +113,7 @@ This element is used to display a collapsible element.
                 if (self.animatable) { self.animated = true; } else { return self; }
 
                 // Frame 1
-                XP.requestAnimationFrame(function () {
+                XP.delay(function () {
 
                     // Preparing
                     if (!animated) {
@@ -123,7 +123,7 @@ This element is used to display a collapsible element.
                     }
 
                     // Frame 2
-                    XP.requestAnimationFrame(function () {
+                    XP.delay(function () {
 
                         // Animating
                         XP.setStyle(wrapper, 'transition', 'margin-bottom ' + duration + 's ' + easing + ', margin-top ' + duration + 's ' + easing);
@@ -267,7 +267,7 @@ This element is used to display a collapsible element.
             attached: function () {
                 var self = this;
                 self.mutated();
-                XP.requestAnimationFrame(function () { self.animatable = true; });
+                XP.delay(function () { self.animatable = true; });
             },
 
             // LISTENER
