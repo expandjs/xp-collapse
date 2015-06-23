@@ -15,8 +15,8 @@ This element is used to display a collapsible element.
 @group containers
 @homepage http://expandjs.com/elements/xp-collapse
 
-@dependency polymer Polymer/polymer
-@dependency expandjs ExpandJS/expandjs
+@dependency polymer Polymer/polymer#^1.0.4
+@dependency expandjs ExpandJS/expandjs#0.9.1
 -->
 
 <link rel="import" href="../polymer/polymer.html">
@@ -73,7 +73,7 @@ This element is used to display a collapsible element.
              */
             collapse: function () {
                 var self = this;
-                if (!self.locked) { self.collapsed = true; }
+                self.collapsed = true;
                 return self;
             },
 
@@ -85,7 +85,7 @@ This element is used to display a collapsible element.
              */
             expand: function () {
                 var self = this;
-                if (!self.locked) { self.collapsed = false; }
+                self.collapsed = false;
                 return self;
             },
 
@@ -269,19 +269,6 @@ This element is used to display a collapsible element.
                 empty: {
                     notify: true,
                     readOnly: true,
-                    reflectToAttribute: true,
-                    type: Boolean,
-                    value: false
-                },
-
-                /**
-                 * If set to true, the collapse state cannot change.
-                 *
-                 * @attribute locked
-                 * @type boolean
-                 * @default false
-                 */
-                locked: {
                     reflectToAttribute: true,
                     type: Boolean,
                     value: false
