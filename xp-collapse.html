@@ -176,11 +176,9 @@ This element is used to display a collapsible element.
                  * @type boolean
                  * @default false
                  * @notifies
-                 * @readonly
                  */
                 animatable: {
                     notify: true,
-                    readOnly: true,
                     type: Boolean,
                     value: false
                 },
@@ -288,7 +286,7 @@ This element is used to display a collapsible element.
             attached: function () {
                 var self = this;
                 self.mutated();
-                XP.delay(function () { self._setAnimatable(true); });
+                XP.delay(function () { self.animatable = true; });
             },
 
             // LISTENER
