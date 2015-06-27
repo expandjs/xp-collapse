@@ -16,7 +16,7 @@ This element is used to display a collapsible element.
 @homepage http://expandjs.com/elements/xp-collapse
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.1
+@dependency expandjs ExpandJS/expandjs#0.9.2
 -->
 
 <link rel="import" href="../polymer/polymer.html">
@@ -112,10 +112,10 @@ This element is used to display a collapsible element.
 
                 // Vars
                 var self     = this,
-                        animated = self.animated,
-                        duration = self.duration / 1000,
-                        easing   = self.easing,
-                        wrapper  = self.$.xpCollapseWrapper;
+                    animated = self.animated,
+                    duration = self.duration / 1000,
+                    easing   = self.easing,
+                    wrapper  = self.$.xpCollapseWrapper;
 
                 // Setting
                 if (self.animatable) { self._setAnimated(true); } else { return self; }
