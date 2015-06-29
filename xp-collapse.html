@@ -155,7 +155,7 @@ This element is used to display a collapsible element.
              */
             _refresh: function () {
                 var self = this;
-                self._jobAnimation = XP.debounce(self._setAnimated.bind(self, false), self.duration);
+                self._jobAnimation = XP.debounce(function () { self._setAnimated(false); }, self.duration);
                 return self;
             },
 
