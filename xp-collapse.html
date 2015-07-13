@@ -16,7 +16,7 @@ This element is used to display a collapsible element.
 @homepage http://expandjs.com/elements/xp-collapse
 
 @dependency polymer Polymer/polymer#^1.0.0
-@dependency expandjs ExpandJS/expandjs#0.9.3
+@dependency expandjs ExpandJS/expandjs#0.9.4
 -->
 
 <link rel="import" href="../polymer/polymer.html">
@@ -154,8 +154,13 @@ This element is used to display a collapsible element.
              * @private
              */
             _refresh: function () {
+
+                // Vars
                 var self = this;
-                self._jobAnimation = XP.debounce(function () { self._setAnimated(false); }, self.duration);
+
+                // Debouncing
+                self._jobAnimation = XP.debounce(self._setAnimated.bind(self, false), self.duration);
+
                 return self;
             },
 
