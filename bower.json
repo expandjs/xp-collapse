@@ -2,6 +2,7 @@
   "name": "xp-collapse",
   "license": "BSD-3-Clause",
   "version": "0.9.6",
+  "main": "xp-collapse.html",
   "description": "A custom element used to create a collapsible element",
   "homepage": "http://expandjs.com/elements/xp-collapse",
   "authors": [
@@ -14,9 +15,6 @@
     "html5",
     "expandjs",
     "web-components"
-  ],
-  "main": [
-    "xp-collapse.html"
   ],
   "ignore": [
     "**/.*"
