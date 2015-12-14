@@ -1,3 +1,3 @@
 # xp-collapse
 
-See the [`documentation page`](http://expandjs.com/elements/xp-collapse) for more information.
+This repository **is deprecated**. Use [`xp-collapse-behavior`](https://github.com/expandjs/xp-collapse-behavior) instead.
